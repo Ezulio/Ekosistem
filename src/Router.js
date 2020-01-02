@@ -14,6 +14,7 @@ import InputSosbud from "./pages/Input/InputSosbud";
 import InputEkonomi from "./pages/Input/InputEkonomi";
 import InputPublik from "./pages/Input/InputPublik";
 import InputSDM from "./pages/Input/InputSDM";
+import About from "./pages/About";
 
 export default function router(){
     return(
@@ -30,6 +31,7 @@ export default function router(){
               <Route path='/Hasil/Sosbud' component={HasilSosbud} />
               <Route path='/Hasil/SDM' component={HasilSDM} />
               <Route path='/Hasil/Publik' component={HasilPublik} />
+              <Route path='/About' component={About} />
           </switch>
           </div>
       </Router>

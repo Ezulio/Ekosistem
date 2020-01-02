@@ -29,6 +29,10 @@ export default function Input() {
         setLoading(false);
     }
 
+    async function add(){
+
+    }
+
     return (
         <Fragment>
             <div style={{display: 'flex', justifyContent: 'center'}}>
@@ -52,7 +56,7 @@ export default function Input() {
                         </div>
                         <br/>
                         <div className="control" style={{flex: 1}}>
-                            <button className="button is-success">{loading?"Loading..":"Add "}</button>
+                            <button className="button is-success" onClick="">{loading?"Loading..":"Add "}</button>
                         </div>
                         <br/>
                         <div className="control" style={{flex: 1}}>

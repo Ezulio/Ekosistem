@@ -70,6 +70,7 @@ export default function Navbar(){
                         Hasil <Icon type="down" />
                     </a>
                 </Dropdown></li>
+                <li><Link to='/About'> About </Link></li>
             </ul>
         </div>
     )
