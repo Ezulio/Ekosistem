@@ -35,10 +35,17 @@ export default function Input() {
                 <div className="field" style={{flex: 1}}>
                     <h1 style={{textAlign: "center", fontWeight: "bolder"}}>Input Data Pengembangan SDM</h1>
                     <form style={{width: '40%', marginLeft: 'auto', marginRight: 'auto'}} onSubmit={(e) => submit(e)}>
+                        <div className="control">
+                            <label className="label">Lokasi :</label>
+                            <input className="input" type="text" placeholder="Lokasi" id="Lokasi"
+                                   onChange={(e) => getData(e)} required/>
+
+                        </div>
+                        <br/>
                         <h1 style={{fontWeight: "bolder"}}>Alternatif </h1>
                         <div style={{padding: 2}}>
                             <div className="control">
-                                <label className="label">Kriteria :</label>
+                                <label className="label">Alternatif :</label>
                                 <input className="input" type="text" placeholder="Alternatif" id="Alternatif"
                                        onChange={(e) => getData(e)} required/>
 
