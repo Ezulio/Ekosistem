@@ -4,7 +4,7 @@ import './Navbar.css';
 import { Menu, Dropdown, Icon } from "antd";
 
 const Input = (
-    <Menu theme="dark" style={{backgroundColor:"black"}}>
+    <Menu theme="dark" style={{backgroundColor:"#333"}}>
         <Menu.Item>
             <a rel="noopener noreferrer">
                 <Link to='/Input/Ekonomi'> Ekonomi </Link>
@@ -30,7 +30,7 @@ const Input = (
 );
 
 const Hasil = (
-    <Menu theme="dark" style={{backgroundColor:"black"}}>
+    <Menu theme="dark" style={{backgroundColor:"#333"}}>
         <Menu.Item>
             <a rel="noopener noreferrer">
                 <Link to='/Hasil/Ekonomi'> Ekonomi </Link>

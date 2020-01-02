@@ -46,7 +46,7 @@ export default function Input() {
 
                         </div>
                         <br/>
-                        <h1 style={{fontWeight: "bolder"}}>Alternatif </h1>
+                        <h1 style={{fontWeight: "bolder",textAlign:"center"}}>Alternatif </h1>
                         <div style={{padding: 2}}>
                             <div className="control">
                                 <label className="label">Alternatif :</label>
