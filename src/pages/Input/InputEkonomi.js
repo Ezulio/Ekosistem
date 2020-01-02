@@ -46,7 +46,7 @@ export default function Input() {
                             <div className="control">
                                 <label className="label">Bobot :</label>
                                 <input className="input" type="text" placeholder="Bobot" id="Bobot"
-                                onChange={(e) => getData(e)} required/>
+                                       onChange={(e) => getData(e)} required/>
                             </div>
                         </div>
                         <br/>

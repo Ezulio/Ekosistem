@@ -1,0 +1,77 @@
+import React, {Fragment, useState, useEffect} from 'react';
+import Axios from 'axios';
+import {useHistory} from 'react-router-dom';
+import 'bulma/css/bulma.css';
+
+export default function Input() {
+
+    let [userData, setUserData] = useState({});
+    let [error, setError] = useState(null);
+    let [loading, setLoading] = useState(false);
+    const history = useHistory();
+
+    function getData(e) {
+        let id = e.target.id;
+        let data = e.target.value;
+        setUserData({...userData, [id]: data});
+    }
+
+    async function submit(e) {
+        setLoading(true);
+        e.preventDefault();
+        try {
+            const token = await Axios.post('http://localhost:5000/auth/login', userData);
+            localStorage.setItem('token', token.data.token);
+            window.location.replace('/')
+        } catch (e) {
+            setError(e.response.data.message);
+        }
+        setLoading(false);
+    }
+
+    return (
+        <Fragment>
+            <div style={{display: 'flex', justifyContent: 'center'}}>
+                <div className="field" style={{flex: 1}}>
+                    <h1 style={{textAlign: "center", fontWeight: "bolder"}}>Input Data</h1>
+                    <form style={{width: '40%', marginLeft: 'auto', marginRight: 'auto'}} onSubmit={(e) => submit(e)}>
+                        <h1 style={{fontWeight: "bold"}}>Kriteria</h1>
+                        <div style={{padding: 2}}>
+                            <label className="label">Kriteria :</label>
+                            <div className="control">
+                                <input className="input" type="text" placeholder="Kriteria" id="Kriteria"
+                                       onChange={(e) => getData(e)} required/>
+                            </div>
+                            <br/>
+                            <div className="control">
+                                <label className="label">Bobot :</label>
+                                <input className="input" type="text" placeholder="Bobot" id="Bobot"
+                                       onChange={(e) => getData(e)} required/>
+                            </div>
+                        </div>
+                        <br/>
+                        <h1 style={{fontWeight: "bolder"}}>Alternatif </h1>
+                        <div style={{padding: 2}}>
+                            <div className="control">
+                                <label className="label">Kriteria :</label>
+                                <input className="input" type="text" placeholder="Alternatif" id="Alternatif"
+                                       onChange={(e) => getData(e)} required/>
+
+                            </div>
+                            <br/>
+                            <div className="control">
+                                <label className="label">Nilai :</label>
+                                <input className="input" type="text" placeholder="Nilai Alternatif" id="Nilai"
+                                       onChange={(e) => getData(e)} required/>
+                            </div>
+                        </div>
+                        <br/>
+                        <div className="control" style={{flex: 1}}>
+                            <button className="button is-success" type={"submit"}>{loading?"Loading..":"Calculate"}</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </Fragment>
+    );
+}
