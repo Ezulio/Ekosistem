@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Fragment } from 'react';
 import { Table } from 'antd';
 import "antd/dist/antd.css";
 const data =  [
@@ -25,7 +25,7 @@ const column = [
     },
     {
         title: 'NAMA',
-        dataIndex: 'nama',
+        dataIndex:   'nama',
         key: 'nama',
     },
     {
@@ -42,8 +42,9 @@ const column = [
 
 export default function Hasil(){
     return(
-        <>
+        <Fragment>
+            <h1 style={{textAlign:"center",fontWeight: "bolder"}}>Hasil Rekomendasi Kategori Ekonomi</h1>
             <Table dataSource={data} columns={column} />;
-        </>
+        </Fragment>
     )
 }

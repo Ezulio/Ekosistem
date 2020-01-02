@@ -6,14 +6,14 @@ const data =  [
         "id": "001",
         "nama": "SDN 03",
         "kesiapan": "Siap",
-        "hasil": "Perikanan, LSM, Pendidikan"
+        "hasil": " LSM"
     }
     ,
     {
         "id": "001",
         "nama": "SDN 03",
         "kesiapan": "Siap",
-        "hasil": "Perikanan, LSM, Pendidikan"
+        "hasil": " LSM"
     }
 ];
 
@@ -43,6 +43,7 @@ const column = [
 export default function Hasil(){
     return(
         <>
+            <h1 style={{textAlign:"center",fontWeight: "bolder"}}>Hasil Rekomendasi Kategori Sosial Budaya</h1>
             <Table dataSource={data} columns={column} />;
         </>
     )

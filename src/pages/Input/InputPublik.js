@@ -33,23 +33,8 @@ export default function Input() {
         <Fragment>
             <div style={{display: 'flex', justifyContent: 'center'}}>
                 <div className="field" style={{flex: 1}}>
-                    <h1 style={{textAlign: "center", fontWeight: "bolder"}}>Input Data</h1>
+                    <h1 style={{textAlign: "center", fontWeight: "bolder"}}>Input Data Pelayanan Publik</h1>
                     <form style={{width: '40%', marginLeft: 'auto', marginRight: 'auto'}} onSubmit={(e) => submit(e)}>
-                        <h1 style={{fontWeight: "bold"}}>Kriteria</h1>
-                        <div style={{padding: 2}}>
-                            <label className="label">Kriteria :</label>
-                            <div className="control">
-                                <input className="input" type="text" placeholder="Kriteria" id="Kriteria"
-                                       onChange={(e) => getData(e)} required/>
-                            </div>
-                            <br/>
-                            <div className="control">
-                                <label className="label">Bobot :</label>
-                                <input className="input" type="text" placeholder="Bobot" id="Bobot"
-                                       onChange={(e) => getData(e)} required/>
-                            </div>
-                        </div>
-                        <br/>
                         <h1 style={{fontWeight: "bolder"}}>Alternatif </h1>
                         <div style={{padding: 2}}>
                             <div className="control">
@@ -67,7 +52,11 @@ export default function Input() {
                         </div>
                         <br/>
                         <div className="control" style={{flex: 1}}>
-                            <button className="button is-success" type={"submit"}>{loading?"Loading..":"Calculate"}</button>
+                            <button className="button is-success">{loading?"Loading..":"Add "}</button>
+                        </div>
+                        <br/>
+                        <div className="control" style={{flex: 1}}>
+                            <button className="button is-link" type={"submit"} style={{alignItems:"center"}}>{loading?"Loading..":"Calculate"}</button>
                         </div>
                     </form>
                 </div>

@@ -43,6 +43,7 @@ const column = [
 export default function Hasil(){
     return(
         <>
+            <h1 style={{textAlign:"center",fontWeight: "bolder"}}>Hasil Rekomendasi Kategori Pelayanan Publik</h1>
             <Table dataSource={data} columns={column} />;
         </>
     )
