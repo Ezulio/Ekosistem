@@ -44,6 +44,7 @@ export default function Hasil(){
     return(
         <Fragment>
             <h1 style={{textAlign:"center",fontWeight: "bolder"}}>Hasil Rekomendasi Kategori Ekonomi</h1>
+            <br/>
             <Table dataSource={data} columns={column} />;
         </Fragment>
     )

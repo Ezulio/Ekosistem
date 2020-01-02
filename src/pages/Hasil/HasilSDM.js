@@ -44,6 +44,7 @@ export default function Hasil(){
     return(
         <>
             <h1 style={{textAlign:"center",fontWeight: "bolder"}}>Hasil Rekomendasi Kategori Pengembangan SDM</h1>
+            <br/>
             <Table dataSource={data} columns={column} />;
         </>
     )
